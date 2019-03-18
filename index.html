@@ -7,9 +7,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 	<!-- VENDOR CSS （外部CSS）-->
 	<link rel="stylesheet" href="vendor/bootstrap-3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="vendor/bootstrap-select-1.13.7/css/bootstrap-select.css">
 	<link rel="stylesheet" href="vendor/font-awesome-4.7.0/css/font-awesome.css">
 	<link rel="stylesheet" href="vendor/linearicons/style.css">
 	<link rel="stylesheet" href="vendor/chartist/css/chartist-custom.css">
+	<link rel="stylesheet" href="vendor/bootstrap-table-1.14.1/bootstrap-table.css">
 	<!-- MAIN CSS（自身CSS） -->
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/demo.css">
@@ -28,6 +30,7 @@
 		<div class="xleftsidebar"></div>
 		<!-- 中心区 -->
 		<div class="xmain">
+
 			<div class="main">
 				<!-- 中心内容区 -->
 				<div class="main-content">
@@ -191,7 +194,7 @@
 								<!-- TODO LIST -->
 								<div class="panel">
 									<div class="panel-heading">
-										<h3 class="panel-title">To-Do List</h3>
+										<h3 class="panel-ktitle">To-Do List</h3>
 										<div class="right">
 											<button type="button" class="btn-toggle-collapse"><i class="lnr lnr-chevron-up"></i></button>
 											<button type="button" class="btn-remove"><i class="lnr lnr-cross"></i></button>
@@ -329,6 +332,11 @@
 										</div>
 									</div>
 									<div class="panel-body">
+										<select class="selectpicker">
+											<option>Mustard</option>
+											<option>Ketchup</option>
+											<option>Barbecue</option>
+										</select>
 										<div id="system-load" class="easy-pie-chart" data-percent="70">
 											<span class="percent">70</span>
 										</div>
@@ -357,15 +365,16 @@
 	</div>
 	<!-- END WRAPPER -->
 	<!-- Javascript -->
-	<script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="js/moudle.js"></script>
+    <script src="js/sidebar.js"></script>
+    <script src="js/tables.js"></script>
 	<script src="vendor/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+	<script src="vendor/bootstrap-select-1.13.7/js/bootstrap-select.js"></script>
 	<script src="vendor/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 	<script src="vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>
 	<script src="vendor/chartist/js/chartist.min.js"></script>
-	<script src="js/moudle.js"></script>
-
-	<script src="js/sidebar.js"></script>
-	<script src="js/tables.js"></script>
+	<script src="vendor/bootstrap-table-1.14.1/bootstrap-table.js"/>
 
 </body>
 
