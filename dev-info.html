@@ -18,6 +18,54 @@
 								<div class="panel-body">
 									<table class="table table-hover" id="devInfo_table">
 										<thead>
+												<div class="row">
+														<div class="col-md-2">
+																显示页数
+															<select class="selectpicker btn btn-xs btn-defalut">
+																<option>1</option>
+																<option>10</option>
+																<option>100</option>
+																<option>1000</option>
+															</select>
+														</div>
+														<div class="col-md-2">
+															<select class="selectpicker btn btn-xs btn-defalut">
+																<option>表字段</option>
+																<option>10</option>
+																<option>100</option>
+																<option>1000</option>
+															</select>
+															<input type="button" class="btn btn-primary btn-xs" value="请筛选" placeholder="请筛选">
+														</div>
+														<div class="col-md-1">
+															
+																				<select class="selectpicker btn btn-xs btn-defalut">
+																						<option>表字段</option>
+																						<option>10</option>
+																						<option>100</option>
+																						<option>1000</option>
+																					</select>
+														</div>
+														<div class="col-md-3">
+																<div class="input-group">
+																		<input type="text" class="form-control" aria-label="...">
+																		<div class="input-group-btn">
+																				<button type="submit" class="btn btn-primary "><span class="glyphicon glyphicon-search"></span></button>
+																		  </ul>
+																		</div><!-- /btn-group -->
+																	  </div><!-- /input-group -->
+														</div>
+														<div class="col-md-1"></div>
+														<div class="col-md-1">
+																<input type="button" class="btn btn-primary btn-xs" placeholder="批量修改" value="批量修改">
+														</div>
+														<div class="col-md-1">
+																<input type="button" class="btn btn-danger btn-xs" placeholder="批量删除" value="批量删除">
+														</div>
+															
+															
+														
+													</div>	
 										<tr>
 											<th class="text-center" ><input type="checkbox" class="allchoose">全选</th>
 											<th class="text-center">设备MAC</th>
@@ -26,14 +74,15 @@
 											<th class="text-center">固件版本</th>
 											<th class="text-center">绑定微信</th>
 											<th class="text-center">授权时间</th>
-											<th class="text-center">操作</th>
+											<th>操&nbsp;&nbsp;&nbsp;作</th>
 										</tr>
 										</thead>
 										<tbody class="text-center">
 										</tbody>
 									</table>
-										<div class="col-md-6" id="page_info"></div>
-										<div class="col-md-6" id="page_nav"></div>
+									<div class="col-md-4" id="page_info" style="line-height: 60px;"></div>
+									<div class="col-md-4"></div>
+									<div class="col-md-4" id="page_nav"></div>
 								</div>
 							</div>
 							<!-- END TABLE HOVER -->
@@ -57,3 +106,27 @@
 		$(":checkbox[class=check_item]").prop("checked",$(this).prop("checked"));
 	});
 </script>
+
+<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="exampleModalLabel">New edit</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+
+          <div class="form-group">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Send message</button>
+      </div>
+    </div>
+  </div>
+</div>

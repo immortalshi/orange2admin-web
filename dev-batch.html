@@ -27,7 +27,7 @@
 													<select class="selectpicker btn btn-xs btn-defalut">
 														<option>1</option>
 														<option>10</option>
-														<option>100</option>
+													-	<option>100</option>
 														<option>1000</option>
 													</select>
 												</div>
@@ -77,19 +77,15 @@
 											<th class="text-center">播放专辑（6岁后）</th>
 											<th class="text-center">关联设备类别</th>
 											<th class="text-center">关联设备数</th>
-											<th class="text-center">操作</th>
+											<th>操&nbsp;&nbsp;&nbsp;作</th>
 										</tr>
 										</thead>
 										<tbody class="text-center">
-										<tr>
-											<td><input type="checkbox"></td>
-											<td>aa</td>
-											<td>bb</td>
-										</tr>
+										
 										</tbody>
 									</table>
 										
-										<div class="col-md-4" id="page_info" style="font-size:20px"></div>
+										<div class="col-md-4" id="page_info" style="line-height: 60px;"></div>
 										<div class="col-md-4"></div>
 										<div class="col-md-4" id="page_nav"></div>
 								</div>
@@ -114,4 +110,62 @@ $("#close").on("click",function (e) {
 $(".allchoose").on("click",function () {
 	$(":checkbox[class=check_item]").prop("checked",$(this).prop("checked"));
 });
+</script>
+
+
+
+<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="exampleModalLabel">New edit</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+
+          <div class="form-group">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Send message</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+	function build_devFavorite_table(tableData) {
+    $("#batch_table tbody").empty();
+    $.each(tableData,function (index,obj) {
+        let choose=$("<td><input type='checkbox' class='check_item'></td>");
+        let batch=$("<td></td>").append(obj["batch"]);
+        let text=$("<td></td>").append(obj["text"]);
+        let levelCode=$("<td></td>").append(obj["levelCode"]);
+        let audioMin=$("<td></td>").append(obj["audioMin"]);
+        let audioMax=$("<td></td>").append(obj["audioMax"]);
+        let modelId=$("<td></td>").append(obj["modelId"]);
+        let deviceCount=$("<td></td>").append(obj["deviceCount"]);
+        let edit=$("<div></div>").addClass("editBtn").append($("<li></li>").addClass("fa fa-pencil-square-o fa-lg"));
+        edit.attr('data-toggle','modal');
+				edit.attr('data-target','#exampleModal');
+				edit.attr('id','#exampleModal');
+        let del=$("<div></div>").addClass("delBtn").append($("<li></li>").addClass("fa fa-trash-o fa-lg"));
+        $("<tr></tr>").append(choose)
+            .append(batch)
+            .append(text)
+            .append(levelCode)
+            .append(audioMin)
+            .append(audioMax)
+            .append(modelId)
+            .append(deviceCount)
+            .append(operation)
+            .appendTo("#batch_table");
+
+    });
+}
 </script>

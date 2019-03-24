@@ -333,6 +333,7 @@ function build_devFavorite_table(tableData) {
         let modelId=$("<td></td>").append(obj["modelId"]);
         let deviceCount=$("<td></td>").append(obj["deviceCount"]);
         let edit=$("<div></div>").addClass("editBtn").append($("<li></li>").addClass("fa fa-pencil-square-o fa-lg"));
+        edit.attr('id','#exampleModal');
         let del=$("<div></div>").addClass("delBtn").append($("<li></li>").addClass("fa fa-trash-o fa-lg"));
         $("<tr></tr>").append(choose)
             .append(batch)
@@ -348,9 +349,22 @@ function build_devFavorite_table(tableData) {
     });
 }
 let $div=$("div");
+
+
+
+/*$(document).ready(function(){
+      $(".editBtn").attr("data-toggle","model");
+      $(".editBtn").attr("data-target","#exampleModal");
+  });*/
+  
 $div.delegate(".editBtn","click",function (event) {
+    $("#exampleModal").modal({backdrop:  false, keyboard: false, show: true});
+
+
     event.stopPropagation();
-    alert("编辑");
+    
+    
+
 });
 $div.delegate(".delBtn","click",function (event) {
     event.stopPropagation();
@@ -362,3 +376,4 @@ $div.delegate(".check_item","click",function (event) {
     $(".allchoose").prop("checked",flag);
 });
 //sss
+
