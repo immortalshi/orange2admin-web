@@ -22,55 +22,45 @@
 									<table class="table table-hover" id="batch_table">
 										<thead>
 											<div class="row">
-												<div class="col-md-2">
-														显示页数
-													<select class="selectpicker btn btn-xs btn-defalut">
+                                                <div class="col-md-2">
+														显示行数
+													<select class="selectpicker" data-width="fit" >
 														<option>1</option>
+<<<<<<< HEAD
 														<option>10</option>
 													-	<option>100</option>
 														<option>1000</option>
+=======
+														<option>2</option>
+														<option>3</option>
+														<option>5</option>
+>>>>>>> 2548b113bee436c161ca9fc6c2b0625b4018b760
 													</select>
-												</div>
-												<div class="col-md-2">
-													<select class="selectpicker btn btn-xs btn-defalut">
+                                                </div>
+                                                <div class="col-md-3">
+													<select class="selectpicker" data-width="fit" multiple data-max-options="2">
 														<option>表字段</option>
-														<option>10</option>
 														<option>100</option>
 														<option>1000</option>
 													</select>
 													<input type="button" class="btn btn-primary btn-xs" value="请筛选" placeholder="请筛选">
-												</div>
-												<div class="col-md-1">
-													
-																		<select class="selectpicker btn btn-xs btn-defalut">
-																				<option>表字段</option>
-																				<option>10</option>
-																				<option>100</option>
-																				<option>1000</option>
-																			</select>
-												</div>
-												<div class="col-md-3">
-													    <div class="input-group">
-																<input type="text" class="form-control" aria-label="...">
+                                                </div>
+                                                    <div class="col-md-5">
+                                                        <div class="input-group">
+
+																<input type="text" class="form-control">
 																<div class="input-group-btn">
-																		<button type="submit" class="btn btn-primary "><span class="glyphicon glyphicon-search"></span></button>
-																  </ul>
+																	<button type="submit" class="btn btn-primary "><span class="glyphicon glyphicon-search"></span></button>
 																</div><!-- /btn-group -->
-															  </div><!-- /input-group -->
-												</div>
-												<div class="col-md-1"></div>
-												<div class="col-md-1">
+                                                        </div><!-- /input-group -->
+                                                    </div>
+                                                <div class="col-md-2">
 														<input type="button" class="btn btn-primary btn-xs" placeholder="批量修改" value="批量修改">
-												</div>
-												<div class="col-md-1">
 														<input type="button" class="btn btn-danger btn-xs" placeholder="批量删除" value="批量删除">
-												</div>
-													
-													
-												
-											</div>	
+                                                </div>
+                                            </div>
 										<tr>
-											<th class="text-center"><input type="checkbox" class="allchoose">全选</th>											<th>批次号</th>
+                                            <th class="text-center"><input type="checkbox" class="allchoose"></th>											<th>批次号</th>
 											<th class="text-center">每日推送文字</th>
 											<th class="text-center">升级模式</th>
 											<th class="text-center">播放专辑（6岁前）</th>
@@ -110,6 +100,7 @@ $("#close").on("click",function (e) {
 $(".allchoose").on("click",function () {
 	$(":checkbox[class=check_item]").prop("checked",$(this).prop("checked"));
 });
+<<<<<<< HEAD
 </script>
 
 
@@ -168,4 +159,7 @@ $(".allchoose").on("click",function () {
 
     });
 }
+=======
+$('.selectpicker').selectpicker({});
+>>>>>>> 2548b113bee436c161ca9fc6c2b0625b4018b760
 </script>

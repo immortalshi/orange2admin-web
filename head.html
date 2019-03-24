@@ -1,6 +1,6 @@
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="brand">
-        <a href="index.html"><img src="images/Cargill_logo2.png" alt="Klorofil Logo" class="img-responsive logo"></a>
+        <a href="index.html"><img src="" alt="Klorofil Logo" class="img-responsive logo"/></a>
     </div>
     <div class="container-fluid">
         <div class="navbar-btn">
@@ -50,4 +50,24 @@
         </div>
     </div>
 </nav>
-<script src="js/klorofil-common.js"></script>
+<script>
+    $('.btn-toggle-fullwidth').on('click', function() {
+        if(!$('body').hasClass('layout-fullwidth')) {
+            $('body').addClass('layout-fullwidth');
+
+        } else {
+            $('body').removeClass('layout-fullwidth');
+            $('body').removeClass('layout-default'); // also remove default behaviour if set
+        }
+
+        $(this).find('.lnr').toggleClass('lnr-arrow-left-circle lnr-arrow-right-circle');
+
+        if($(window).innerWidth() < 1025) {
+            if(!$('body').hasClass('offcanvas-active')) {
+                $('body').addClass('offcanvas-active');
+            } else {
+                $('body').removeClass('offcanvas-active');
+            }
+        }
+    });
+</script>
